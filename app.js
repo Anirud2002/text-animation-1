@@ -3,7 +3,8 @@ const animation1 = document.querySelector(".animation-1")
 const mainh1 = document.querySelector(".main h1")
 const animatingH1 = document.querySelector(".animating-h1")
 const colors = ["#f52e14", "#f59014", "#f5d314", "#a6f514", "#14f51b", "#14d7f5", "#c426f0"]
-const words = ["WELCOME", "TO", "MY", "WEBSITE"]
+const normalWord = "WELCOME TO MY WEBSITE"
+const words = normalWord.split(" ")
 let span;
 let spanArray;
 let letters;
