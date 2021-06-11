@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.animation-1 {
+  background-image: radial-gradient(circle, #303030, #141414);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.animating-h1 {
+  font-size: 5rem;
+  transition: 0.3s ease;
+  font-family: "Hammersmith", sans-serif;
+}
+
+span {
+  color: white;
+  display: inline-block;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main h1 {
+  font-size: 5rem;
+  color: black;
+}
+
+@media (min-width: 750px) {
+  .animating-h1 {
+    font-size: 8rem;
+  }
+  main h1 {
+    font-size: 8rem;
+  }
+}
