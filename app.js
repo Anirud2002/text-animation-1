@@ -2,7 +2,7 @@
 const animation1 = document.querySelector(".animation-1")
 const mainh1 = document.querySelector(".main h1")
 const animatingH1 = document.querySelector(".animating-h1")
-const colors = ["#f52e14", "#f59014", "#f5d314", "#a6f514", "#14f51b", "#14d7f5", "#c426f0"]
+const colors = ["#14d7f5", "#f52e14", "#a6f514", "#f5d314"]
 const normalWord = "WELCOME TO MY WEBSITE"
 const words = normalWord.split(" ")
 let span;
@@ -26,25 +26,20 @@ function getspans(){
     spanArray = Object.values(span)
 }
 
+
+function chooseColor(){
+    if(colorIndex === colors.length - 1) colorIndex = 0
+    else colorIndex = colorIndex + 1
+    console.log(colorIndex)
+    return colors[colorIndex]
+}
+
+
 function startingAnimation(word){
     getLetters(word)
     getspans()
     textTween.fromTo(spanArray, {x: 100, autoAlpha: 0 , color: "transparent"}, {x: 0, autoAlpha: 1,color: chooseColor(), stagger: 0.1})
     .to(spanArray, {color:"transparent", stagger: 0.1, onComplete: ()=> fadeInWords()})
-}
-
-function chooseColor(){
-    let index = Math.floor(Math.random() * colors.length)
-    if(index === colorIndex){
-        if(index === colors.length - 1){
-            colorIndex = 0
-            return colors[0]
-        }
-        colorIndex = index + 1
-        return colors[colorIndex]
-    }
-    colorIndex = index
-    return colors[colorIndex]
 }
 
 

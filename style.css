@@ -47,7 +47,7 @@ span {
 }
 
 .main h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   color: black;
 }
 
@@ -55,7 +55,7 @@ span {
   .animating-h1 {
     font-size: 8rem;
   }
-  main h1 {
-    font-size: 8rem;
+  .main h1 {
+    font-size: 6rem;
   }
 }
